@@ -17,10 +17,10 @@
 
 
 // Arrays for all possible characters
-const lowerCase = "abcdefghijklmnopqrstuvwxyz".split(" ");
-const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ");
-const numbers = "0123456789".split(" ");
-const specialChars = `!"#$%&'()*+,-./:;<=>?@[]^_{|}~`.split(" ");
+const lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const numbers = "0123456789".split("");
+const specialChars = `!"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`.split("");
 
 // Generate password button
 const generateBtn = document.querySelector("#generate");
@@ -32,11 +32,25 @@ const numberPass = document.querySelector("#number");
 const specialPass = document.querySelector("#special");
 const lengthPass = document.querySelector("#length");
 
-// Actual password generator
+// Create an array for possible password
+let possiblePass = [];
 
+// Create an array for generated password
+let finalPass =[];
 
-//LEFT OFF HERE********************** 
-
+// Add checked options to the possible password array
+if (lowerPass.checked) {
+    possiblePass = possiblePass.concat(lowerCase);
+}
+if (upperPass.checked) {
+    possiblePass = possiblePass.concat(upperCase);
+}
+if (numberPass.checked) {
+    possiblePass = possiblePass.concat(numbers);
+}
+if (specialPass.checked) {
+    possiblePass = possiblePass.concat(specialChars);
+}
 
 
 // Write password to the #password input
