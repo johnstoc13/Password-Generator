@@ -35,8 +35,10 @@ function generatePassword() {
     if (specialPass.checked) {
         possiblePass = possiblePass.concat(specialChars);
     }
-    console.log(possiblePass);
-    
+    else {
+        alert("Select at least one password criteria box to continue.");
+    }
+
 
     // // Validate the password length & loop to create finalPass
     // if (lengthPass < 8 || lengthPass > 128) {
