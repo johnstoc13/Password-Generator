@@ -17,16 +17,25 @@
 
 
 // Arrays for all possible characters
-
 const lowerCase = "abcdefghijklmnopqrstuvwxyz".split(" ");
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ");
 const numbers = "0123456789".split(" ");
 const specialChars = `!"#$%&'()*+,-./:;<=>?@[]^_{|}~`.split(" ");
 
+// Generate password button
+const generateBtn = document.querySelector("#generate");
+
+// Generate password criteria
+const lowerPass = document.querySelector("#lower");
+const upperPass = document.querySelector("#upper");
+const numberPass = document.querySelector("#number");
+const specialPass = document.querySelector("#special");
+const lengthPass = document.querySelector("#length");
+
+// Actual password generator
 
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+
 
 // Write password to the #password input
 function writePassword() {
