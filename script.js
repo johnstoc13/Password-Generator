@@ -14,3 +14,11 @@
 //       - use random num for range within ascii char code for upper or lower, etc
 //   loop through length of pass to add a char to password
 //   finally displaying password
+
+
+// Arrays for all possible characters
+
+const lowerCase = "abcdefghijklmnopqrstuvwxyz".split(" ");
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ");
+const numbers = "0123456789".split(" ");
+const specialChars = `!"#$%&'()*+,-./:;<=>?@[]^_{|}~`.split(" ");
