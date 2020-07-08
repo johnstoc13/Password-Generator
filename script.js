@@ -53,6 +53,37 @@ if (specialPass.checked) {
 }
 
 
+// Need to validate the password length
+// Need to loop through possiblePass to create finalPass based on lengthPass
+
+
+if (lengthPass < 8 || lengthPass > 128) {
+    alert ("Please select a number between 8 and 128.");
+}
+else {
+    for (var i = 0; i < lengthPass; i++) {
+        var num = Math.floor(Math.random() * lengthPass);
+    }
+}
+
+
+//Borrowed from previous activity to recall looping 
+for (var i = 0; i < 10; i++) {
+    // Generate a random number between 1 and 10
+    // Math.floor will round down, meaning we would get a number between 0 and 9, so we'll always add 1 to bump it up.
+    var num = Math.floor(Math.random() * 10) + 1;
+
+    // Display in console
+    console.log(num);
+  }
+
+
+
+
+
+
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
