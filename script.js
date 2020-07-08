@@ -35,6 +35,8 @@ const lengthPass = document.querySelector("#length");
 // Actual password generator
 
 
+//LEFT OFF HERE********************** 
+
 
 
 // Write password to the #password input
