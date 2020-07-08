@@ -35,9 +35,6 @@ function generatePassword() {
     if (specialPass.checked) {
         possiblePass = possiblePass.concat(specialChars);
     }
-    else {
-        alert("Select at least one password criteria box to continue.");
-    }
 
 
     // // Validate the password length & loop to create finalPass
@@ -55,6 +52,11 @@ function generatePassword() {
     //     alert("Select at least one password criteria box to continue.");
     //     return "";
     // }
+
+    // need to create a string as an output
+    // for loop is n chars long... want to create a reandom string containing these
+    // selected options
+    // randomly select chars from potential array
 
 
     // Still trying to figure out how to loop through 
