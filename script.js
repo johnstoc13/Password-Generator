@@ -19,8 +19,8 @@ function generatePassword() {
     // Create an array for possible password
     let possiblePass = [];
 
-    // Create an array for generated password
-    let finalPass = [];
+    // Create an array for newly created password
+    let createdPass = [];
 
     // Obtain password length in order to validate
     // Cited: https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript
@@ -40,11 +40,14 @@ function generatePassword() {
         possiblePass = possiblePass.concat(specialChars);
     }
 
+    // Take array of created password and join to make final password
+    const finalPass = createdPass.join("");
+
     // Loop to generate password
     for(i = 0; i < pwLength; i++) {
-        finalPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
+        createdPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
     }
-    console.log(finalPass);
+    console.log(createdPass);
 
     // Validates password length
     // Cited: https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
@@ -52,47 +55,16 @@ function generatePassword() {
         alert("Please select a number between 8 and 128.");
         return "";
     }
-    else {
+    // Validates that at least one box is checked
+    else if (!lowerPass.checked && !upperPass.checked && !numberPass.checked && !specialPass.checked)  {
         alert("Select at least one password criteria box to continue.");
         return "";
     }
-
-    // for(i = 0; i < pwLength; i++) {
-    //     finalPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
-    // }
-    // Validate the password length & loop to create finalPass
-    
-    // else{
-    //     for (let i = 0; i < lengthPass; i++) {
-    //         let num = Math.floor(Math.random() * lengthPass);
-    //         return password;
-    //     }
-    // }
-    
-
-    // NOTES FROM JULY 9th
-    // Form is not reading password length.
-
-
-
-
-    // need to create a string as an output  JOIN NEW ARRAY INTO STRING
-    // for loop is n chars long... want to create a reandom string containing these
-    // selected options
-    // randomly select chars from potential array
-    
+    return finalPass; 
 }
 
-// function newPassword() {
-//     pwLength[Math.floor(Math.random() * pwLength.length)];
-// }
-// console.log(newPassword);
 
-
-
-
-
-
+// STILL NOT WRITING PASSWORD INTO FORM...********
 
 // Write password to the #password input
 function writePassword() {
