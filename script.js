@@ -6,13 +6,18 @@ const specialChars = `!"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`.split("");
 
 // Generate password button
 const generateBtn = document.querySelector("#generate");
+// console.log(generateBtn);
 
 // Generate password criteria
 const lowerPass = document.querySelector("#lower");
 const upperPass = document.querySelector("#upper");
 const numberPass = document.querySelector("#number");
 const specialPass = document.querySelector("#special");
-const lengthPass = document.querySelector("#length");
+
+// console.log(lowerPass);
+// console.log(upperPass);
+// console.log(numberPass);
+// console.log(specialPass);
 
 function generatePassword() {
 
@@ -21,6 +26,11 @@ function generatePassword() {
 
     // Create an array for generated password
     let finalPass = [];
+
+    // Obtain password length in order to validate
+    // Cited: https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript
+    let pwLength = document.querySelector("#length").value;
+    console.log(pwLength);
 
     // Add checked options to the possible password array
     if (lowerPass.checked) {
@@ -35,16 +45,18 @@ function generatePassword() {
     if (specialPass.checked) {
         possiblePass = possiblePass.concat(specialChars);
     }
+    console.log(possiblePass);
 
+    // Validates password length
     // Cited: https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
-    if (lengthPass < 8 || lengthPass > 128 || isNaN(lengthPass)) {
+    if (pwLength < 8 || pwLength > 128 || isNaN(pwLength)) {
         alert("Please select a number between 8 and 128.");
         return "";
     }
-    // else {
-    //     alert("Select at least one password criteria box to continue.");
-    //     return "";
-    // }
+    else {
+        alert("Select at least one password criteria box to continue.");
+        return "";
+    }
 
 
     // // Validate the password length & loop to create finalPass
@@ -63,13 +75,17 @@ function generatePassword() {
 
 
 
-    // need to create a string as an output
+    // need to create a string as an output  JOIN NEW ARRAY INTO STRING
     // for loop is n chars long... want to create a reandom string containing these
     // selected options
     // randomly select chars from potential array
     
 }
 
+function newPassword() {
+    pwLength[Math.floor(Math.random() * pwLength.length)];
+}
+console.log(newPassword);
 
 
 
