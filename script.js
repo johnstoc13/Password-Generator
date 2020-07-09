@@ -44,7 +44,6 @@ function generatePassword() {
     for(i = 0; i < pwLength; i++) {
         createdPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
     }
-    console.log(createdPass);
 
     // Validates password length
     // Cited: https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
