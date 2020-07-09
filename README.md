@@ -16,7 +16,7 @@ Password is displayed in an alert or written to the page.
 
 ## Deployment
 
-The website can be reached here:  https://
+The website can be reached here:  https://johnstoc13.github.io/Password-Generator/
 
 ## Notes
 
