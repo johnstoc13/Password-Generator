@@ -35,33 +35,30 @@ function generatePassword() {
     if (specialPass.checked) {
         possiblePass = possiblePass.concat(specialChars);
     }
+    if (lengthPass < 8 || lengthPass > 128) {
+        alert("Please select a number between 8 and 128.");
+        return "";
+    }
+    // else {
+    //     alert("Select at least one password criteria box to continue.");
+    //     return "";
+    // }
 
 
     // // Validate the password length & loop to create finalPass
-    // if (lengthPass < 8 || lengthPass > 128) {
-    //     alert("Please select a number between 8 and 128.");
-    //     return "";
-    // }
+    
     // else if{
     //     for (let i = 0; i < lengthPass; i++) {
     //         let num = Math.floor(Math.random() * lengthPass);
     //         return password;
     //     }
     // }
-    // else {
-    //     alert("Select at least one password criteria box to continue.");
-    //     return "";
-    // }
+    
 
     // need to create a string as an output
     // for loop is n chars long... want to create a reandom string containing these
     // selected options
     // randomly select chars from potential array
-
-
-    // Still trying to figure out how to loop through 
-    // and arrange if/else statements....
-    // Need to do more research
     
 }
 
