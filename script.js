@@ -40,9 +40,6 @@ function generatePassword() {
         possiblePass = possiblePass.concat(specialChars);
     }
 
-    // Take array of created password and join to make final password
-    const finalPass = createdPass.join("");
-
     // Loop to generate password
     for(i = 0; i < pwLength; i++) {
         createdPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
@@ -56,15 +53,15 @@ function generatePassword() {
         return "";
     }
     // Validates that at least one box is checked
-    else if (!lowerPass.checked && !upperPass.checked && !numberPass.checked && !specialPass.checked)  {
+    if (!lowerPass.checked && !upperPass.checked && !numberPass.checked && !specialPass.checked)  {
         alert("Select at least one password criteria box to continue.");
         return "";
     }
-    return finalPass; 
+
+    // Takes array of created password and joins to make string of final password
+    let finalPass = createdPass.join("");
+    return finalPass;
 }
-
-
-// STILL NOT WRITING PASSWORD INTO FORM...********
 
 // Write password to the #password input
 function writePassword() {
