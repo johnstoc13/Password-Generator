@@ -11,13 +11,17 @@
 </head>
 
 <body>
+
+    <!-- Header -->
     <header class="container-fluid text-center pt-3">
         <h1>Chase's Password Generator</h1>
     </header>
 
     <br />
 
+    <!-- Main Container for Password Generator -->
     <main class="container">
+
         <div class="card text-center">
             <div class="card-header bg-primary py-4 text-white">
                 <h2>Generate a Password</h2>
@@ -25,7 +29,8 @@
             <div class="card-body bg-warning">
                 <h5 class="card-title">Check the boxes to select your password criteria.</h5>
                 <div class="form-group">
-                    <!-- Credit to https://shaack.com/projekte/bootstrap-input-spinner/ -->
+                    <!-- Cited: https://shaack.com/projekte/bootstrap-input-spinner/ -->
+                    <!-- Helped me create the input box for password length. -->
                     <label for="length">Password Length</label>
                     <input id="length" type="number" value="8" min="8" max="128" step="1" />
                 </div>
@@ -50,12 +55,10 @@
                     placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
             </div>
             <div class="card-footer bg-primary">
-                <button type="button" id="generate" class="btn btn-primary bg-danger border-danger">Generate Password</button>
+                <button type="button" id="generate" class="btn btn-primary bg-danger border-danger">Generate
+                    Password</button>
             </div>
         </div>
-
-
-
 
     </main>
 

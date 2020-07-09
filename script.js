@@ -35,7 +35,9 @@ function generatePassword() {
     if (specialPass.checked) {
         possiblePass = possiblePass.concat(specialChars);
     }
-    if (lengthPass < 8 || lengthPass > 128) {
+
+    // Cited: https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
+    if (lengthPass < 8 || lengthPass > 128 || isNaN(lengthPass)) {
         alert("Please select a number between 8 and 128.");
         return "";
     }
@@ -55,12 +57,20 @@ function generatePassword() {
     // }
     
 
+    // NOTES FROM JULY 9th
+    // Form is not reading password length.
+
+
+
+
     // need to create a string as an output
     // for loop is n chars long... want to create a reandom string containing these
     // selected options
     // randomly select chars from potential array
     
 }
+
+
 
 
 
