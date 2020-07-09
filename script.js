@@ -6,7 +6,6 @@ const specialChars = `!"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`.split("");
 
 // Generate password button
 const generateBtn = document.querySelector("#generate");
-// console.log(generateBtn);
 
 // Generate password criteria
 const lowerPass = document.querySelector("#lower");
@@ -14,11 +13,7 @@ const upperPass = document.querySelector("#upper");
 const numberPass = document.querySelector("#number");
 const specialPass = document.querySelector("#special");
 
-// console.log(lowerPass);
-// console.log(upperPass);
-// console.log(numberPass);
-// console.log(specialPass);
-
+// Password Generator
 function generatePassword() {
 
     // Create an array for possible password
@@ -30,7 +25,6 @@ function generatePassword() {
     // Obtain password length in order to validate
     // Cited: https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript
     let pwLength = document.querySelector("#length").value;
-    console.log(pwLength);
 
     // Add checked options to the possible password array
     if (lowerPass.checked) {
@@ -45,7 +39,12 @@ function generatePassword() {
     if (specialPass.checked) {
         possiblePass = possiblePass.concat(specialChars);
     }
-    console.log(possiblePass);
+
+    // Loop to generate password
+    for(i = 0; i < pwLength; i++) {
+        finalPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
+    }
+    console.log(finalPass);
 
     // Validates password length
     // Cited: https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
@@ -58,10 +57,12 @@ function generatePassword() {
         return "";
     }
 
-
-    // // Validate the password length & loop to create finalPass
+    // for(i = 0; i < pwLength; i++) {
+    //     finalPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
+    // }
+    // Validate the password length & loop to create finalPass
     
-    // else if{
+    // else{
     //     for (let i = 0; i < lengthPass; i++) {
     //         let num = Math.floor(Math.random() * lengthPass);
     //         return password;
@@ -82,10 +83,10 @@ function generatePassword() {
     
 }
 
-function newPassword() {
-    pwLength[Math.floor(Math.random() * pwLength.length)];
-}
-console.log(newPassword);
+// function newPassword() {
+//     pwLength[Math.floor(Math.random() * pwLength.length)];
+// }
+// console.log(newPassword);
 
 
 
@@ -97,9 +98,7 @@ console.log(newPassword);
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
-  
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
