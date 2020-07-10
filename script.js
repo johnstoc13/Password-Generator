@@ -54,9 +54,9 @@ function generatePassword() {
 
     // Loop to generate password
     for(i = 0; i < pwLength; i++) {
-        createdPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)])
+        createdPass.push(possiblePass[Math.floor(Math.random() * possiblePass.length)]);
     }
-    
+
     // Takes array of created password and joins to make string of final password
     let finalPass = createdPass.join("");
     return finalPass;
