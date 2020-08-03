@@ -7,11 +7,17 @@ This project includes an application that generates a random password based on u
 ## Requirements
 
 Functional, deployed application
+
 GitHub repository with README describing the project
+
 Working Password Generator
+
 Length of password of at least 8 characters and no more than 128.
+
 Options for character types to include lowercase, uppercase, numeric, and/or special characters.
+
 Inputs must be validated, and at least one character type must be selected.
+
 Password is displayed in an alert or written to the page.
 
 ## Deployment
